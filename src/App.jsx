@@ -5,10 +5,9 @@ import { getCityCoordinates } from './utils/geocoding';
 import CitySearch from './components/CitySearch';
 import WeatherDisplay from './components/WeatherDisplay';
 
-
 export default function App() {
-  const [cityInput, setCityInput] = useState('London');
-  const [currentCity, setCurrentCity] = useState('London');
+  const [cityInput, setCityInput] = useState('Tokyo');
+  const [currentCity, setCurrentCity] = useState('Tokyo');
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -62,8 +61,6 @@ export default function App() {
       setIsLoading(false);
     }
   }, []);
-
-
 
   useEffect(() => {
     fetchWeather('Tokyo');

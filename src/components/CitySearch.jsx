@@ -10,7 +10,7 @@ export default function CitySearch({ cityInput, setCityInput, onSearch, isLoadin
           value={cityInput}
           onChange={(e) => setCityInput(e.target.value)}
           placeholder="Enter city (e.g., Tokyo, New York, Indore)"
-          className="flex-grow p-4 text-lg text-white bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150"
+          className="grow p-4 text-lg text-white bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150"
           aria-label="City search input"
         />
         <button

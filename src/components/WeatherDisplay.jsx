@@ -2,14 +2,6 @@ import React from 'react';
 import { MapPin, Droplet, Wind, CheckCircle, AlertTriangle } from 'lucide-react';
 import weatherCodeMap from '../utils/weatherCodes';
 
-const WeatherIcon = ({ condition, size = 32, className = '' }) => {
-  const mapEntry = Object.keys(weatherCodeMap).find(key => false); // placeholder - we will map by condition below
-  // Find the icon by matching condition string
-  const { Icon } = weatherCodeMap(condition) || {};
-  if (!Icon) return null;
-  return <Icon size={size} className={`text-white ${className}`} />;
-};
-
 const ForecastItem = ({ day, high, low, condition }) => {
   const { Icon } = weatherCodeMap(condition) || {};
   return (
@@ -50,7 +42,7 @@ export default function WeatherDisplay({ weatherData, isLoading, error, currentC
 
   return (
     <div className="space-y-10">
-      <div className="bg-gradient-to-br from-indigo-700 to-indigo-900 p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between">
+      <div className="bg-linear-to-br from-indigo-700 to-indigo-900 p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
           <div className="flex items-center text-white mb-2">
             <MapPin size={24} className="mr-2" />
